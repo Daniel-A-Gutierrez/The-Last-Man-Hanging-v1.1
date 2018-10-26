@@ -1,0 +1,78 @@
+Initialize engine version: 5.4.3f1 (01f4c123905a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8088 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.177 seconds
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Daniel\Documents\GitHub\The-Last-Man-Hanging\The Last Man Hanging\The Last Man Hanging_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.000001 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.174726 ms
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 1197.
+Total: 0.363840 ms (FindLiveObjects: 0.081920 ms CreateObjectMapping: 0.022720 ms MarkObjects: 0.208320 ms  DeleteObjects: 0.049920 ms)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.686400 ms
+
+Unloading 131 unused Assets to reduce memory usage. Loaded Objects now: 263.
+Total: 2.233602 ms (FindLiveObjects: 0.019840 ms CreateObjectMapping: 0.008320 ms MarkObjects: 0.141120 ms  DeleteObjects: 2.064002 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.321280 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1197.
+Total: 0.363840 ms (FindLiveObjects: 0.085440 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.224640 ms  DeleteObjects: 0.041280 ms)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.643200 ms
+
+Unloading 131 unused Assets to reduce memory usage. Loaded Objects now: 263.
+Total: 2.095042 ms (FindLiveObjects: 0.024320 ms CreateObjectMapping: 0.008320 ms MarkObjects: 0.156160 ms  DeleteObjects: 1.905602 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.347520 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1197.
+Total: 0.370560 ms (FindLiveObjects: 0.073920 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.240960 ms  DeleteObjects: 0.043520 ms)
+
+Setting up 3 worker threads for Enlighten.
+  Thread -> id: 9cc -> priority: 1 
+  Thread -> id: 4848 -> priority: 1 
+  Thread -> id: 2040 -> priority: 1 
