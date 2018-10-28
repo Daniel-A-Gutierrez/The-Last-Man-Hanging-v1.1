@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Levels/Factory.unity
-  isLoaded: 1
-  isActive: 1
