@@ -19,6 +19,7 @@ public class CameraBoundry : MonoBehaviour {
         {
             Destroy(other.gameObject);
             GameObject.FindGameObjectWithTag("CountdownStarter").GetComponent<CountdownStart>().decrementPlayerCount();
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
         }
        
     }
