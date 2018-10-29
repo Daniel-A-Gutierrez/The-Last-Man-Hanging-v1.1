@@ -53,11 +53,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\grapple_hook.cs" />
-     <Compile Include="Assets\roperatioe.cs" />
- <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Daniel/Documents/GitHub/The-Last-Man-Hanging-1.1/The Last Man Hanging/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Scripts\Aiming.cs" />
+     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+     <Compile Include="Assets\Scripts\CameraBoundry.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CameraScroll.cs" />
+     <Compile Include="Assets\Scripts\CountdownManager.cs" />
+     <Compile Include="Assets\Scripts\CountdownStart.cs" />
+     <Compile Include="Assets\Scripts\grapple_hook.cs" />
+     <Compile Include="Assets\Scripts\HardCodedGrapple.cs" />
+     <Compile Include="Assets\Scripts\HookObject.cs" />
+     <Compile Include="Assets\Scripts\Items.cs" />
+     <Compile Include="Assets\Scripts\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\Parralax.cs" />
+     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
+     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\PlayerController2.cs" />
+     <Compile Include="Assets\Scripts\Restarter.cs" />
+     <Compile Include="Assets\Scripts\roperatio.cs" />
+     <Compile Include="Assets\Scripts\roperatioe.cs" />
+     <Compile Include="Assets\Scripts\StartSong.cs" />
+     <Compile Include="Assets\Scripts\targetFrameRateSet.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Daniel/Documents/GitHub/The-Last-Man-Hanging-1.1/The Last Man Hanging/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -66,6 +82,9 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Daniel/Documents/GitHub/The-Last-Man-Hanging-1.1/The Last Man Hanging/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.StandardEvents">
+ <HintPath>C:/Users/Daniel/Documents/GitHub/The-Last-Man-Hanging-1.1/The Last Man Hanging/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -298,10 +317,6 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D35494F7-6110-2372-BF80-4FADAF788721}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
