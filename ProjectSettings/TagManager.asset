@@ -9,6 +9,7 @@ TagManager:
   - Reticle
   - UI
   - CountdownStarter
+  - AudioManager
   layers:
   - Default
   - TransparentFX
