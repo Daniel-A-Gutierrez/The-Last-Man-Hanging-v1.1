@@ -38,6 +38,7 @@ public class PlayerController2 : MonoBehaviour
 	void Update () 
 	{
 		States[State]();
+		print(State);
 		setFace();
 	}
 
@@ -45,6 +46,7 @@ public class PlayerController2 : MonoBehaviour
 	void GROUNDED()
 	{
 		State = "GROUNDED";
+	
 		if(!checkGround())
 		{
 			AIRBORNE();
