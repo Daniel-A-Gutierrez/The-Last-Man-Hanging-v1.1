@@ -8,14 +8,14 @@ public class CountdownStart : MonoBehaviour {
     float timeStart;
     bool poop = false;
     GameObject theCanvas;
-    int playersLeft;
+    public int playersLeft;
     float timeEnd;
 	void Start ()
     {
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
-        playersLeft = 1; // 4 normally  but im doing this for single player mode
+        playersLeft; // 4 for multiplayer, 1 for singleplayer
 	}
     void PauseEverything()
     {

@@ -1981,6 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersLeft: 4
 --- !u!1 &470154426
 GameObject:
   m_ObjectHideFlags: 0
