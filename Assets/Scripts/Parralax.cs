@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-/*so i need a few numbers . i need the width of the layer in pixels and in gamespace, i need the leftmost 
+/*so i need a few numbers . i need the width of the layer in pixels and in gamespace, i need the leftmost
  coordinate of it and the left and rightmost coordinates of the camera view, and i need the coordinates of the
  leftmost part of the layer and 1/3 way through the layer in gamespace. once i have these things this is what ill do
  set all left borders equal to the left camera border. record the initial position of the transform of the layer
- at this position. once the camera's right border has reached the 2/3 or full point of the image, reset it to 
+ at this position. once the camera's right border has reached the 2/3 or full point of the image, reset it to
  that initial x position*/
 
 
@@ -19,10 +19,10 @@ public class Parralax : MonoBehaviour {
     float[] speeds;
     float[] initialx;
     float[] widths;
-     public    float width0;
+    float width0;
     float width1;
     float width2;
-    public float width3;
+    float width3;
     float width4;
     float width5;
 
@@ -45,7 +45,7 @@ public class Parralax : MonoBehaviour {
     int I;
     void Start()
     {
-        int childCount = transform.childCount;
+        int childCount = transform.childCount; //Gives count on number of children the object has
         Vector3 mc = GameObject.FindWithTag("MainCamera").transform.position;
         transform.position = new Vector3(mc.x, mc.y, transform.position.z);
         widths = new float[] { width0, width1, width2, width3, width4, width5 };
@@ -86,13 +86,14 @@ public class Parralax : MonoBehaviour {
         {
             //print(go.GetComponent<BoxCollider2D>().size.x);
 
-            widths[I] = go.GetComponent<BoxCollider2D>().size.x * go.transform.localScale.x;// THIS CAN CAUSE PROBLEMS
+            widths[I] = go.GetComponent<SpriteRenderer>().size.x * go.transform.localScale.x;// THIS CAN CAUSE PROBLEMS
             sets[I] = widths[I] * 1 / 2;
             I++;
         }
         I--;
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
+    
 	void Awake()
     {
         int childCount = transform.childCount;
@@ -117,11 +118,12 @@ public class Parralax : MonoBehaviour {
         for(int i = 0; i < layers.Length; i ++)
         {
 
-            widths[i] = layers[i].GetComponent<BoxCollider2D>().size.x * layers[i].transform.localScale.x;// THIS CAN CAUSE PROBLEMS
+            widths[i] = layers[i].GetComponent<SpriteRenderer>().size.x * layers[i].transform.localScale.x;// THIS CAN CAUSE PROBLEMS
             sets[i] = widths[i] * 1 / 2;
         }
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
+
 	// Update is called once per frame
 	void Update ()
     {
@@ -129,7 +131,7 @@ public class Parralax : MonoBehaviour {
         transform.position = new Vector3(mc.transform.position.x, mc.transform.position.y, transform.position.z);
         for (int i = 0; i < layers.Length; i++)
         {
-            
+
             layers[i].transform.localPosition = new Vector2(layers[i].transform.localPosition.x -
                 speeds[i] * mc.GetComponent<CameraScroll>().speed * Time.deltaTime, layers[i].transform.localPosition.y);
             if(initialx[i] - layers[i].transform.localPosition.x  >= sets[i])

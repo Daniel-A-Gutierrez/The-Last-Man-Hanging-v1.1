@@ -7,6 +7,7 @@ public class CountdownStart : MonoBehaviour {
     float cameraSpeed;
     float timeStart;
     bool poop = false;
+    bool cursor = false; //Change to true for removing Cursor
     GameObject theCanvas;
     public int playersLeft;
     float timeEnd;
@@ -15,7 +16,10 @@ public class CountdownStart : MonoBehaviour {
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
-        playersLeft; // 4 for multiplayer, 1 for singleplayer
+        int playersLeft; // 4 for multiplayer, 1 for singleplayer
+        if (cursor){
+            Cursor.visible = false; //Removes cursor for PC users
+        }
 	}
     void PauseEverything()
     {
@@ -36,7 +40,7 @@ public class CountdownStart : MonoBehaviour {
         //}
         theCanvas.GetComponent<CountdownManager>().SetText(" ");
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = cameraSpeed;
-        
+
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject go in gos)
         {
@@ -67,7 +71,7 @@ public class CountdownStart : MonoBehaviour {
 
             timeEnd = Time.time;
         }
-        
+
     }
 	void Update ()
     {
@@ -86,7 +90,7 @@ public class CountdownStart : MonoBehaviour {
         }
         if(timeEnd != 0 & Time.time - timeEnd > 3)
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<LoadLevel>().Load_Level(0);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<LoadLevel>().Load_Level();
         }
     }
 }
