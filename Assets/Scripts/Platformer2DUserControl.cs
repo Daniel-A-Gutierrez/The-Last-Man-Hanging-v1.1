@@ -24,7 +24,6 @@ public class Platformer2DUserControl : MonoBehaviour
     public bool justJumped;
     public bool boogie;
     public bool inputing = true;
-    public Vector2 movedir;
 
     private void Awake()
     {
@@ -54,11 +53,10 @@ public class Platformer2DUserControl : MonoBehaviour
             yMove = Input.GetAxis("Vertical");
             LThrow = Input.GetKey(KeyCode.Mouse0);
             RThrow = Input.GetKey(KeyCode.Mouse1);
-            jump = Input.GetKey(KeyCode.Space);
+            jump = Input.GetKeyDown(KeyCode.Space);
             useItemContinuous = Input.GetKey(KeyCode.Return);
             useItem1Frame = Input.GetKeyDown(KeyCode.Return);
         }
-        movedir = new Vector2(xMove,yMove);
     }
 
 
@@ -107,11 +105,11 @@ public class Platformer2DUserControl : MonoBehaviour
                 yMove = Input.GetAxis("Vertical");
                 LThrow = Input.GetKey(KeyCode.Mouse0);
                 RThrow = Input.GetKey(KeyCode.Mouse1);
-                jump = Input.GetKey(KeyCode.Space);
+                jump = Input.GetKeyDown(KeyCode.Space);
                 useItemContinuous = Input.GetKey(KeyCode.Return);
                 useItem1Frame = Input.GetKeyDown(KeyCode.Return);
+                if(jump){m_Character.Jump();}
             }
-            movedir = new Vector2(xMove,yMove);
         }
     }
     public void noInput()

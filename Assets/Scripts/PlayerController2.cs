@@ -16,6 +16,7 @@ public class PlayerController2 : MonoBehaviour
 	public float playerAccel;
 	bool facingRight;
 
+	private float topSpeed;
 	private Platformer2DUserControl user;  
 	private Animator anim;
 	private Rigidbody2D rb;
@@ -28,6 +29,7 @@ public class PlayerController2 : MonoBehaviour
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
 		player_num = GetComponent<HardCodedGrapple>().PlayerNumber; //overrides player num in player controller
+		topSpeed = walkSpeed;
 		States = new Dictionary<string,Action> ();
 		State = "GROUNDED";
 		States["GROUNDED"] = GROUNDED;
@@ -39,6 +41,7 @@ public class PlayerController2 : MonoBehaviour
 	{
 		States[State]();
 		print(State);
+		print(user.jump);
 		setFace();
 	}
 
@@ -52,13 +55,17 @@ public class PlayerController2 : MonoBehaviour
 			AIRBORNE();
 			return;
 		}
-		if(user.jump) 
-		{
+		walk();
+	}
+
+	public void Jump()
+	{
+		if(State == "GROUNDED")
+		{		
 			rb.AddForce(new Vector2(0,1)*jumpImpulse,ForceMode2D.Impulse);
 			AIRBORNE();
 			return;
 		}
-		walk();
 	}
 
 	void AIRBORNE()
@@ -82,12 +89,23 @@ public class PlayerController2 : MonoBehaviour
 	{
 		//i want them to always have startup acceleration , but have no deceleration.
 		//sadly this is all i want to do for now.
-		rb.velocity = new Vector2(user.movedir.x*walkSpeed,rb.velocity.y);
+		topSpeed = Math.Abs(rb.velocity.x);
+		if(Mathf.Abs(user.xMove) > .01f  &  (user.xMove * rb.velocity.x) > -.01f)
+			if(Mathf.Abs(rb.velocity.x) < walkSpeed)
+				rb.velocity += new Vector2(user.xMove*playerAccel*Time.deltaTime,0);
+			else
+				rb.velocity = new Vector2(user.xMove*topSpeed,rb.velocity.y);
+		else
+			rb.velocity -= new Vector2(rb.velocity.x,0);
+			topSpeed = walkSpeed;
 	}
 
 	void fly()
 	{
-		rb.velocity += new Vector2(user.movedir.x*airControl,rb.velocity.y);
+		topSpeed = Math.Abs(rb.velocity.x);
+		if(Mathf.Abs(user.xMove) > .01f)
+			rb.velocity += new Vector2(user.xMove*airControl*playerAccel*Time.deltaTime,0);
+		
 	}
 
 	void swing()
@@ -98,7 +116,7 @@ public class PlayerController2 : MonoBehaviour
 	void setFace()
 	{
 		facingRight = (rb.velocity.x>0) ? true : false;
-		if(user.movedir.magnitude > .01f)
+		if(Math.Abs(user.xMove) > .01f)
 		{
 			Vector3 theScale = transform.localScale;
 			theScale.x = new Vector2(rb.velocity.x,0).normalized.x;
@@ -108,7 +126,7 @@ public class PlayerController2 : MonoBehaviour
 
 	bool checkGround()
 	{
-		Collider2D col = Physics2D.OverlapCircle(new Vector3(transform.position.x,transform.position.y-groundCheckOffset,0),groundCheckRadius,ground);
+		Collider2D col = Physics2D.OverlapCircle(new Vector3(transform.position.x,transform.position.y+groundCheckOffset,0),groundCheckRadius,ground);
 		if(col != null)
 		{
 			return true;
@@ -120,7 +138,7 @@ public class PlayerController2 : MonoBehaviour
 	void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.white;
-		Gizmos.DrawWireSphere(new Vector3(transform.position.x,transform.position.y-groundCheckOffset,0),groundCheckRadius);
+		Gizmos.DrawWireSphere(new Vector3(transform.position.x,transform.position.y+groundCheckOffset,0),groundCheckRadius);
 		//maybe one for jump height and grapple length as well? 
 	}
 

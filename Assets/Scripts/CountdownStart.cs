@@ -15,7 +15,8 @@ public class CountdownStart : MonoBehaviour {
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
-        playersLeft; // 4 for multiplayer, 1 for singleplayer
+//        playersLeft; // 4 for multiplayer, 1 for singleplayer
+        Debug.Log("line 19 in CountdownStart: playersLeft typo. plz fix. ");
 	}
     void PauseEverything()
     {
