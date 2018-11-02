@@ -113,32 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &224919313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011711988896, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-    type: 2}
-  m_PrefabInternal: {fileID: 1696940519}
---- !u!114 &224919323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224919313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e007733f93602442a556d571f0e2cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player_num: 1
-  walkSpeed: 10
-  jumpImpulse: 27
-  airControl: 0.224
-  ground:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckOffset: -0.4
-  groundCheckRadius: 0.12
-  playerAccel: 45
 --- !u!1001 &531641221
 Prefab:
   m_ObjectHideFlags: 0
@@ -742,64 +716,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010162436812, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
+    - target: {fileID: 95000013960464096, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
         type: 2}
-      propertyPath: controller
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010162436812, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50000012201972422, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 58000013061710830, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50000012201972422, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014122527182, guid: 76177d1e4fbd2884d83e6ce9311a0f23, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014122527182, guid: 76177d1e4fbd2884d83e6ce9311a0f23, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000014272438684, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000011998930948, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000011998930948, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000011998930948, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000011998930948, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.8
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76177d1e4fbd2884d83e6ce9311a0f23, type: 2}
   m_IsPrefabAsset: 0

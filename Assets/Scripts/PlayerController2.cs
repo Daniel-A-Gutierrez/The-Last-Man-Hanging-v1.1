@@ -40,8 +40,6 @@ public class PlayerController2 : MonoBehaviour
 	void Update () 
 	{
 		States[State]();
-		print(State);
-		print(user.jump);
 		setFace();
 	}
 
