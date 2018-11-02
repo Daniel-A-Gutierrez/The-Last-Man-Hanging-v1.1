@@ -10,6 +10,7 @@ public class LoadLevel : MonoBehaviour
     public void Load_Level()
     {
         float level = Random.Range(2.0f, 4.0f);
+        print(level);
         SceneManager.LoadScene((int)level);
     }
 

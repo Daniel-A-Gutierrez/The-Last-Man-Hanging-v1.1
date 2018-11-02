@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 /*so i need a few numbers . i need the width of the layer in pixels and in gamespace, i need the leftmost
  coordinate of it and the left and rightmost coordinates of the camera view, and i need the coordinates of the
@@ -45,7 +45,7 @@ public class Parralax : MonoBehaviour {
     int I;
     void Start()
     {
-        int childCount = transform.childCount; //Gives count on number of children the object has
+        int childCount = transform.childCount;
         Vector3 mc = GameObject.FindWithTag("MainCamera").transform.position;
         transform.position = new Vector3(mc.x, mc.y, transform.position.z);
         widths = new float[] { width0, width1, width2, width3, width4, width5 };
@@ -86,14 +86,13 @@ public class Parralax : MonoBehaviour {
         {
             //print(go.GetComponent<BoxCollider2D>().size.x);
 
-            widths[I] = go.GetComponent<SpriteRenderer>().size.x * go.transform.localScale.x;// THIS CAN CAUSE PROBLEMS
+            widths[I] = go.GetComponent<BoxCollider2D>().size.x * go.transform.localScale.x;// THIS CAN CAUSE PROBLEMS
             sets[I] = widths[I] * 1 / 2;
             I++;
         }
         I--;
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
-    
 	void Awake()
     {
         int childCount = transform.childCount;
@@ -118,12 +117,11 @@ public class Parralax : MonoBehaviour {
         for(int i = 0; i < layers.Length; i ++)
         {
 
-            widths[i] = layers[i].GetComponent<SpriteRenderer>().size.x * layers[i].transform.localScale.x;// THIS CAN CAUSE PROBLEMS
+            widths[i] = layers[i].GetComponent<BoxCollider2D>().size.x * layers[i].transform.localScale.x;// THIS CAN CAUSE PROBLEMS
             sets[i] = widths[i] * 1 / 2;
         }
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
-
 	// Update is called once per frame
 	void Update ()
     {
