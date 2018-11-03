@@ -4,7 +4,7 @@ using System.Collections;
 
 /*
  * Attach this script to the camera itself.
- * 
+ *
 */
 public class CameraScroll : MonoBehaviour {
     GameObject[] waypoints;
@@ -17,7 +17,7 @@ public class CameraScroll : MonoBehaviour {
         Array.Sort(waypoints, compareWaypoints);
         flattenWaypoints();
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
         moveToWaypoint();

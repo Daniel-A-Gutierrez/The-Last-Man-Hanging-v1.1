@@ -11,6 +11,7 @@ public class CountdownStart : MonoBehaviour {
     GameObject theCanvas;
     public int playersLeft;
     float timeEnd;
+
 	void Start ()
     {
         theCanvas = GameObject.Find("Canvas");

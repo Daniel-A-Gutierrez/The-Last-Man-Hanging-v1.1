@@ -1800,7 +1800,6 @@ Transform:
   - {fileID: 685491081}
   - {fileID: 211949568}
   - {fileID: 45966778}
-  - {fileID: 934505960}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4479,6 +4478,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012536997450, guid: 1f26385f29f58ef439de376472eb4b65,
     type: 2}
   m_PrefabInternal: {fileID: 330031508}
+--- !u!1 &330031510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011971210550, guid: 1f26385f29f58ef439de376472eb4b65,
+    type: 2}
+  m_PrefabInternal: {fileID: 330031508}
 --- !u!1001 &332668429
 Prefab:
   m_ObjectHideFlags: 0
@@ -4827,6 +4831,11 @@ Prefab:
 --- !u!4 &349185483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012536997450, guid: 1f26385f29f58ef439de376472eb4b65,
+    type: 2}
+  m_PrefabInternal: {fileID: 349185482}
+--- !u!1 &349185484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011971210550, guid: 1f26385f29f58ef439de376472eb4b65,
     type: 2}
   m_PrefabInternal: {fileID: 349185482}
 --- !u!1001 &353408293
@@ -5350,7 +5359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLevel: 1
 --- !u!114 &378971228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8267,6 +8275,9 @@ GameObject:
   - component: {fileID: 587079599}
   - component: {fileID: 587079598}
   - component: {fileID: 587079597}
+  - component: {fileID: 587079604}
+  - component: {fileID: 587079603}
+  - component: {fileID: 587079602}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -8361,6 +8372,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &587079602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587079596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12be4588f4bd5a4ca89252f32e98a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 132302635}
+  - {fileID: 1901301002}
+  - {fileID: 1842504352}
+  - {fileID: 78339873}
+  - {fileID: 685491080}
+  - {fileID: 211949567}
+  - {fileID: 45966777}
+--- !u!114 &587079603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587079596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c14570723d1df4a9d5843f74fbb75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grips:
+  - {fileID: 1443749968}
+  - {fileID: 330031510}
+  - {fileID: 349185484}
+--- !u!114 &587079604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587079596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersLeft: 4
 --- !u!1001 &589540856
 Prefab:
   m_ObjectHideFlags: 0
@@ -12989,34 +13046,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f26385f29f58ef439de376472eb4b65, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &934505959
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 934505960}
-  m_Layer: 0
-  m_Name: Waypoint8
-  m_TagString: CameraWaypoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &934505960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 934505959}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2000, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 124860046}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &936130406
 Prefab:
   m_ObjectHideFlags: 0
@@ -18915,6 +18944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersLeft: 0
 --- !u!1001 &1449353202
 Prefab:
   m_ObjectHideFlags: 0
@@ -20415,8 +20445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb4a8cee16d7544889e905af68372f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width0: 10
-  width3: 1
   speed0: 0.1
   speed1: 0.5
   speed2: 0.3
