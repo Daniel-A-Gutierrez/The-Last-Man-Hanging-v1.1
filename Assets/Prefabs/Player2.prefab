@@ -53,9 +53,7 @@ GameObject:
   - component: {fileID: 4000012248426858}
   - component: {fileID: 212000011627279600}
   - component: {fileID: 95000012240379552}
-  - component: {fileID: 58000013472417724}
   - component: {fileID: 50000012025612422}
-  - component: {fileID: 114000013050318138}
   - component: {fileID: 114000010386076474}
   - component: {fileID: 61000011483225670}
   - component: {fileID: 114000011127719006}
@@ -179,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 1000011436428892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.818383, y: 6.7644525, z: 0}
-  m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000011933451556}
   - {fileID: 4000014073254240}
@@ -246,23 +244,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &58000013472417724
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011436428892}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
-  serializedVersion: 2
-  m_Radius: 0.16
 --- !u!61 &61000011483225670
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -275,18 +258,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5625, y: 1.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.68}
+  m_Size: {x: 0.28, y: 1.28}
   m_EdgeRadius: 0
 --- !u!95 &95000012240379552
 Animator:
@@ -327,11 +310,10 @@ MonoBehaviour:
   useItemContinuous: 0
   useItem1Frame: 0
   justPressed: 0
-  controller: 0
+  controller: 1
   justJumped: 0
   boogie: 0
   inputing: 1
-  movedir: {x: 0, y: 0}
 --- !u!114 &114000011127719006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,25 +362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a989446509327c4586b5c5a6c498a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013050318138
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011436428892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxSpeed: 10
-  m_JumpForce: 1600
-  m_CrouchSpeed: 0.25
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 1280
-  airAccel: 15
-  m_Grounded: 0
 --- !u!114 &114000013116822916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,16 +388,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e007733f93602442a556d571f0e2cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_num: 2
+  player_num: 1
   walkSpeed: 10
-  jumpImpulse: 1600
-  airControl: 0.5
+  jumpImpulse: 27
+  airControl: 0.22
   ground:
     serializedVersion: 2
     m_Bits: 256
-  groundCheckOffset: -0.5
-  groundCheckRadius: -0.1
-  playerAccel: 1
+  groundCheckOffset: -0.6
+  groundCheckRadius: 0.18
+  playerAccel: 45
 --- !u!120 &120000012536275640
 LineRenderer:
   m_ObjectHideFlags: 1

@@ -21,9 +21,7 @@ GameObject:
   - component: {fileID: 4000014122527182}
   - component: {fileID: 212000012874061366}
   - component: {fileID: 95000013960464096}
-  - component: {fileID: 58000013061710830}
   - component: {fileID: 50000012201972422}
-  - component: {fileID: 114000014272438684}
   - component: {fileID: 114000010162436812}
   - component: {fileID: 61000011998930948}
   - component: {fileID: 114000011508832324}
@@ -248,21 +246,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &58000013061710830
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011711988896}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
-  serializedVersion: 2
-  m_Radius: 0.16
 --- !u!61 &61000011998930948
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -275,18 +258,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: -0.09}
+  m_Offset: {x: -0.06, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5625, y: 1.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 0.8}
+  m_Size: {x: 0.28, y: 1.28}
   m_EdgeRadius: 0
 --- !u!95 &95000013960464096
 Animator:
@@ -338,7 +321,7 @@ MonoBehaviour:
   useItemContinuous: 0
   useItem1Frame: 0
   justPressed: 0
-  controller: 0
+  controller: 1
   justJumped: 0
   boogie: 0
   inputing: 1
@@ -394,25 +377,6 @@ MonoBehaviour:
   directionVectorRotation: 0
   slackLength: 0
   CLIMBDOWN: 0
---- !u!114 &114000014272438684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011711988896}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxSpeed: 10
-  m_JumpForce: 1600
-  m_CrouchSpeed: 0.25
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 1280
-  airAccel: 15
-  m_Grounded: 0
 --- !u!114 &114843473976299534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,8 +395,8 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  groundCheckOffset: -0.4
-  groundCheckRadius: 0.12
+  groundCheckOffset: -0.6
+  groundCheckRadius: 0.18
   playerAccel: 45
 --- !u!120 &120000012348963770
 LineRenderer:

@@ -9133,7 +9133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLevel: 1
 --- !u!114 &1702484141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10848,11 +10847,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 58000013061710830, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.35
-      objectReference: {fileID: 0}
     - target: {fileID: 114000010162436812, guid: 76177d1e4fbd2884d83e6ce9311a0f23,
         type: 2}
       propertyPath: controller
@@ -11250,8 +11244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb4a8cee16d7544889e905af68372f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width0: 10
-  width3: 1
   speed0: 0.1
   speed1: 0.5
   speed2: 0.3
