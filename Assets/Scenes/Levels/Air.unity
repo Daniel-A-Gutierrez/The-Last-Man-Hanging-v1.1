@@ -11735,7 +11735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02c7fc19b9a28a42a70d0069c69fd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrameRate: 0
+  targetFrameRate: 120
 --- !u!82 &877637686
 AudioSource:
   m_ObjectHideFlags: 0
