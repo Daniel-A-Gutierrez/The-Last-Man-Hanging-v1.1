@@ -8,7 +8,7 @@ public class parallax : MonoBehaviour
 	Vector3 oldCamPos;
 	Mesh m;
 	MeshFilter mf;
-	public float speed = .1f;
+	public float ratio = 1f;
 
 	// Use this for initialization
 	void Start () 
@@ -18,8 +18,7 @@ public class parallax : MonoBehaviour
 		mf = GetComponent<MeshFilter>();
 		m = mf.mesh;
 		Vector2 [] uvs = m.uv;
-		foreach(Vector2 v in uvs)
-			print(v);
+		ratio = ratio/10;
 	}
 	void Update () 
 	{
@@ -29,8 +28,8 @@ public class parallax : MonoBehaviour
 
 		for(int i = 0; i<uvs.Length;i++)
 		{
-			uvs[i].x -= speed*offset.x/transform.localScale.x;
-			uvs[i].y -= speed*offset.y/transform.localScale.z;
+			uvs[i].x -= ratio*offset.x/transform.localScale.x;
+			uvs[i].y -= ratio*offset.y/transform.localScale.z;
 		}
 
 		m.uv = uvs;
