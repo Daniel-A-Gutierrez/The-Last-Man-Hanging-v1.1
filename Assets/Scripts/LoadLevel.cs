@@ -12,6 +12,8 @@ public class LoadLevel : MonoBehaviour
         float level = Random.Range(2.0f, 4.0f);
         print(level);
         SceneManager.LoadScene((int)level);
+        //FindObjectOfType<AudioManager>().Play("BackgroundMusic");
+
     }
 
     void Update()
