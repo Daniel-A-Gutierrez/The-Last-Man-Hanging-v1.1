@@ -3,6 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SecondAirBackgroundParralax : MonoBehaviour {
+
+	Transform camTrans;
+	Vector3 oldCamPos;
+	GameObject m;
+	SpriteRenderer mf;
+	public float ratio = 1f;
+
+	// Use this for initialization
+	void Start ()
+	{
+		camTrans = GameObject.FindGameObjectWithTag("MainCamera").transform;
+		oldCamPos = camTrans.position;
+		mf = GetComponent<SpriteRenderer>();
+		m = mf.gameObject;
+		Vector2 uvs = m.transform.position;
+		ratio = ratio/10;
+	}
+	void Update ()
+	{
+		Vector3 offset = camTrans.position - oldCamPos;
+		oldCamPos = camTrans.position;
+		Vector2 uvs = m.transform.position;
+
+		uvs.x -= ratio*offset.x/transform.localScale.x;
+		uvs.y -= ratio*offset.y/transform.localScale.z;
+
+		m.transform.position = uvs;
+	}
+/*
 	public float speed;
 
 	float initialy;
@@ -57,5 +86,5 @@ public class SecondAirBackgroundParralax : MonoBehaviour {
 			{
 					thisLayer.transform.localPosition = new Vector2(camerax, cameray);
 			}
-	}
+	}*/
 	}

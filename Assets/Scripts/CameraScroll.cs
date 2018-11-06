@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using Unity.Collections;
 
 /*
  * Attach this script to the camera itself.
@@ -13,9 +14,7 @@ public class CameraScroll : MonoBehaviour {
     public float speed;
 	// Use this for initialization
 	void Start () {
-        waypoints = GameObject.FindGameObjectsWithTag("CameraWaypoint");
-        Array.Sort(waypoints, compareWaypoints);
-        flattenWaypoints();
+        StartCoroutine("Wait", 2);
 	}
 
 	// Update is called once per frame
@@ -50,6 +49,14 @@ public class CameraScroll : MonoBehaviour {
     }
     int compareWaypoints(GameObject x, GameObject y) //Sorting algorithm for alphabatizing waypoints by their Unity names (letters then nums)
     {
-        return x.name.CompareTo(y.name);
+        int temp = Int32.Parse(x.name.Substring(9,2));
+        int temp2 = Int32.Parse(y.name.Substring(9,2));
+        return temp.CompareTo(temp2);
+    }
+    IEnumerator Wait(int time){
+      yield return new WaitForSeconds(time);
+      waypoints = GameObject.FindGameObjectsWithTag("CameraWaypoint");
+      Array.Sort(waypoints, compareWaypoints);
+      flattenWaypoints();
     }
 }
