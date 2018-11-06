@@ -35,6 +35,7 @@ public class CountdownStart : MonoBehaviour {
     }
     void StartEverything()
     {
+
         //foreach(GameObject go in GameObject.FindGameObjectsWithTag("UI"))
         //{
         //    Destroy(go);
@@ -48,8 +49,10 @@ public class CountdownStart : MonoBehaviour {
             go.GetComponent<Platformer2DUserControl>().startInput();
         }
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<StartSong>().Play();
+        FindObjectOfType<AudioManager>().Play("BackgroundMusic");
+
     }
-	// Update is called once per frame
+    // Update is called once per frame
     public void decrementPlayerCount()
     {
         playersLeft--;
