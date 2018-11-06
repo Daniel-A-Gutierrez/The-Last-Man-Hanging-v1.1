@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43708492}
   m_Layer: 0
-  m_Name: Waypoint1
+  m_Name: 'Waypoint 1 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5300,7 +5300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349439966}
   m_Layer: 0
-  m_Name: Waypoint2
+  m_Name: 'Waypoint 2 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6467,7 +6467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460436786}
   m_Layer: 0
-  m_Name: Waypoint5
+  m_Name: 'Waypoint 5 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8429,7 +8429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617634756}
   m_Layer: 0
-  m_Name: Waypoint6
+  m_Name: 'Waypoint 6 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10197,7 +10197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725992089}
   m_Layer: 0
-  m_Name: Waypoint4
+  m_Name: 'Waypoint 4 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11510,7 +11510,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860449754}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07f12165ce03ef74ea8f3f875575e239, type: 3}
   m_Name: 
@@ -11710,7 +11710,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 877637682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &877637684
@@ -22878,7 +22878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665789209}
   m_Layer: 0
-  m_Name: Waypoint3
+  m_Name: 'Waypoint 3 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23908,6 +23908,7 @@ GameObject:
   - component: {fileID: 1755173300}
   - component: {fileID: 1755173301}
   - component: {fileID: 1755173302}
+  - component: {fileID: 1755173303}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -24047,7 +24048,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersLeft: 4
+--- !u!114 &1755173303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755173294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9b7cc3a8047674da916b7446826d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1766276895
 Prefab:
   m_ObjectHideFlags: 0
@@ -24654,7 +24665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811212372}
   m_Layer: 0
-  m_Name: Waypoint7
+  m_Name: 'Waypoint 7 '
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
