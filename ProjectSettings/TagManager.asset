@@ -10,6 +10,8 @@ TagManager:
   - UI
   - CountdownStarter
   - AudioManager
+  - Grip
+  - Hook
   layers:
   - Default
   - TransparentFX

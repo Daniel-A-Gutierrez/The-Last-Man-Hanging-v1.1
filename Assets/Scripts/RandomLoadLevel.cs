@@ -9,7 +9,7 @@ public class RandomLoadLevel : MonoBehaviour
 
     public void RandomLevel()
     {
-        int level = Random.Range(3, 6);
+        int level = Random.Range(4, 7);
         SceneManager.LoadScene(level);
 
     }

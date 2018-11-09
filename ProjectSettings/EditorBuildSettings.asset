@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NumberPlayersScene.unity
     guid: edf09dd0310468742bffcfc4db717551
   - enabled: 1
+    path: Assets/Scenes/Levels/Tutorial Level.unity
+    guid: 37b7b9b69c9ec2d47a2b9114a28e96fa
+  - enabled: 1
     path: Assets/Scenes/Levels/Air.unity
     guid: 7f715d121c2ba4b458c792f57e4e6f8e
   - enabled: 1
