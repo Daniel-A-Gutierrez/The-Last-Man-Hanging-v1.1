@@ -9,13 +9,16 @@ public class CountdownStart : MonoBehaviour {
     bool poop = false;
     bool cursor = false; //Change to true for removing Cursor
     GameObject theCanvas;
-    public static int playersLeft = 4;
+    public static int playersLeft;
     float timeEnd;
 
+    GameObject[] players;
     GameObject[] deathField ;
     GameObject mainCamera;
 	void Start ()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        playerLeft = players.Length;
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
