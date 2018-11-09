@@ -5621,7 +5621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252965114}
   m_Layer: 0
-  m_Name: Waypoint1
+  m_Name: Waypoint 1
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8377,6 +8377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sameLevel: 1
 --- !u!114 &1702484141
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class CountdownStart : MonoBehaviour {
 	void Start ()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        playerLeft = players.Length;
+        playersLeft = players.Length;
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
