@@ -12,6 +12,7 @@ TagManager:
   - AudioManager
   - Grip
   - Hook
+  - DeathZone
   layers:
   - Default
   - TransparentFX
