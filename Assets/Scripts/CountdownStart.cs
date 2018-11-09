@@ -9,7 +9,7 @@ public class CountdownStart : MonoBehaviour {
     bool poop = false;
     bool cursor = false; //Change to true for removing Cursor
     GameObject theCanvas;
-    public static int playersLeft;
+    public static int playersLeft = 4;
     float timeEnd;
 
     GameObject[] deathField ;
@@ -31,7 +31,7 @@ public class CountdownStart : MonoBehaviour {
         cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
-        
+
         foreach(GameObject go in gos)
         {
             go.GetComponent<Platformer2DUserControl>().noInput();
