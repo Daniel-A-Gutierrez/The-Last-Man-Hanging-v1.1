@@ -8265,7 +8265,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1702484131}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3f04e09d04abaf543a8e08f260c780e0, type: 3}
@@ -8374,7 +8374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1702484131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1702484141
@@ -8383,7 +8383,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1702484131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00a876ac6ee96504da0655601aed35fa, type: 3}
   m_Name: 
@@ -8456,6 +8456,7 @@ GameObject:
   - component: {fileID: 1709580163}
   - component: {fileID: 1709580169}
   - component: {fileID: 1709580168}
+  - component: {fileID: 1709580170}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -8576,7 +8577,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersLeft: 4
+--- !u!114 &1709580170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709580162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9b7cc3a8047674da916b7446826d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1710935339
 Prefab:
   m_ObjectHideFlags: 0
