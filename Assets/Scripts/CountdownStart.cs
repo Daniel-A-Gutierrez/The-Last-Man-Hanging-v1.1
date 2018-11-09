@@ -12,6 +12,8 @@ public class CountdownStart : MonoBehaviour {
     public static int playersLeft;
     float timeEnd;
 
+    GameObject[] deathField ;
+    GameObject mainCamera;
 	void Start ()
     {
         theCanvas = GameObject.Find("Canvas");
@@ -21,12 +23,15 @@ public class CountdownStart : MonoBehaviour {
         if (cursor){
             Cursor.visible = false; //Removes cursor for PC users
         }
+        deathField = GameObject.FindGameObjectsWithTag("DeathZone");
 	}
     void PauseEverything()
     {
+
         cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
+        
         foreach(GameObject go in gos)
         {
             go.GetComponent<Platformer2DUserControl>().noInput();
@@ -58,6 +63,10 @@ public class CountdownStart : MonoBehaviour {
         playersLeft--;
         if (playersLeft <= 1)
         {
+        foreach(GameObject g in deathField)
+            {
+                g.SetActive(false);
+            }
             PauseEverything();
 
             GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");
