@@ -9,10 +9,11 @@ public class CursorChanger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
 	}
 
 	// Update is called once per frame
 	void OnMouseEnter () {
-		Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
+
 	}
 }

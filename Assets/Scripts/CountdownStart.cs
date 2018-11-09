@@ -83,7 +83,8 @@ public class CountdownStart : MonoBehaviour {
             }
             print(winNumber);
             theCanvas.GetComponent<CountdownManager>().fitText();
-            theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + Time.time + "</b>");
+            int timer = (int)(Time.time-timeStart);
+            theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + timer + " seconds\nWinner: Player " + winNumber + "</b>");
 
             timeEnd = Time.time;
         }
