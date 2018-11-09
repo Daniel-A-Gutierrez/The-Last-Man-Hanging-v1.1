@@ -5,21 +5,16 @@ using UnityEngine.SceneManagement;
 public class RandomLoadLevel : MonoBehaviour
 {
     //Platformer2DUserControl control;
-    //public bool inLevel;
-
+    public bool sameLevel;
     public void RandomLevel()
     {
-        int level = Random.Range(4, 7);
-        SceneManager.LoadScene(level);
-
-    }
-
-    void Update()
-    {
-        /*if (!inLevel & (Input.GetKeyDown("joystick 1 button 7") || Input.GetKeyDown("joystick 2 button 7") || Input.GetKeyDown("joystick 3 button 7") || Input.GetKeyDown("joystick 4 button 7")))
-        {
-            print("start");
-
-        }*/
+        if (!sameLevel){
+          int level = Random.Range(5, 8);
+          SceneManager.LoadScene(level);
+        }
+        else{
+          Scene scene = SceneManager.GetActiveScene();
+          SceneManager.LoadScene(scene.buildIndex);
+        }
     }
 }

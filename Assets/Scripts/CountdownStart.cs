@@ -12,8 +12,13 @@ public class CountdownStart : MonoBehaviour {
     public static int playersLeft;
     float timeEnd;
 
+    GameObject[] players;
+    GameObject[] deathField ;
+    GameObject mainCamera;
 	void Start ()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        playersLeft = players.Length;
         theCanvas = GameObject.Find("Canvas");
         timeStart = Time.time;
         PauseEverything();
@@ -21,12 +26,15 @@ public class CountdownStart : MonoBehaviour {
         if (cursor){
             Cursor.visible = false; //Removes cursor for PC users
         }
+        deathField = GameObject.FindGameObjectsWithTag("DeathZone");
 	}
     void PauseEverything()
     {
+
         cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
+
         foreach(GameObject go in gos)
         {
             go.GetComponent<Platformer2DUserControl>().noInput();
@@ -58,6 +66,10 @@ public class CountdownStart : MonoBehaviour {
         playersLeft--;
         if (playersLeft <= 1)
         {
+        foreach(GameObject g in deathField)
+            {
+                g.SetActive(false);
+            }
             PauseEverything();
 
             GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");
@@ -71,7 +83,8 @@ public class CountdownStart : MonoBehaviour {
             }
             print(winNumber);
             theCanvas.GetComponent<CountdownManager>().fitText();
-            theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + Time.time + "</b>");
+            int timer = (int)(Time.time-timeStart);
+            theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + timer + " seconds\nWinner: Player " + winNumber + "</b>");
 
             timeEnd = Time.time;
         }

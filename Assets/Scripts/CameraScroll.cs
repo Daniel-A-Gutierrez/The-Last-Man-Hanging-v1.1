@@ -54,9 +54,10 @@ public class CameraScroll : MonoBehaviour {
         return temp.CompareTo(temp2);
     }
     IEnumerator Wait(int time){
-      yield return new WaitForSeconds(time);
       waypoints = GameObject.FindGameObjectsWithTag("CameraWaypoint");
       Array.Sort(waypoints, compareWaypoints);
       flattenWaypoints();
+      yield return new WaitForSeconds(time);
+      
     }
 }

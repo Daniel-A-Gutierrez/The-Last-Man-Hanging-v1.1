@@ -15,8 +15,9 @@ public class SwitchTutorialText : MonoBehaviour {
 	public static bool gripped;
 	float tempTime = 0.0f;
 	int frame = 0;
-	int count = 0;
-	bool over = false;
+	int count;
+	bool over;
+	float timeStart;
 
 	GameObject player;
 	GameObject grip;
@@ -24,6 +25,7 @@ public class SwitchTutorialText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+			timeStart = Time.time;
 			welcome = transform.GetChild(1).gameObject.GetComponent<Text>();
 			trySwing = transform.GetChild(2).gameObject.GetComponent<Text>();
 			great = transform.GetChild(3).gameObject.GetComponent<Text>();
@@ -43,13 +45,17 @@ public class SwitchTutorialText : MonoBehaviour {
 			right.enabled = false;
 			grip.SetActive(false);
 			grip1.SetActive(false);
+
+			count = 0;
+			over = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		float frame = 1.0f/Time.deltaTime;
+		float timer = Time.time - timeStart;
 
-		if (Time.time >= 3.5 && Time.time < 8){
+		if (Time.time >= 3.5 && timer < 8){
 			welcome.enabled = true;
 		}
 		else if (Time.time >= 8 && Time.time < 12){
