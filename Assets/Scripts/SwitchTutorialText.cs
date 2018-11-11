@@ -58,41 +58,27 @@ public class SwitchTutorialText : MonoBehaviour {
 		if (Time.time >= 3.5 && timer < 8){
 			welcome.enabled = true;
 		}
-		else if (!gripped && timer >= 8){
 			welcome.enabled = false;
-			great.enabled = false;
-			move.enabled = false;
-			right.enabled = false;
 			trySwing.enabled = true;
 			grip.SetActive(true);
+
 		}
-		else if (gripped && timer >= 8 && tempTime < 12){
-			trySwing.enabled = false;
-			great.enabled = true;
-			tempTime = Time.time;
-		}
-		else if (tempTime > 12 && gripped && !(Input.GetKey("a")) && !(Input.GetKey("d")) && !over){
-			great.enabled = false;
+		else if (Time.time >= 12 && Time.time < 16){
 			trySwing.enabled = false;
 			move.enabled = true;
 		}
-		else if (gripped && (Input.GetKey("a") || Input.GetKey("d")) && count < 360){
-			great.enabled = false;
-			trySwing.enabled = false;
+		else if (Time.time >= 16 && Time.time < 20){
 			move.enabled = false;
-			great2.enabled = true;
-			over = true;
-			count++;
-		}
-		//(Input.GetKeyDown("A") || Input.GetKeyDown("D"))
-		else if (gripped && count >= 360){
-			great.enabled = false;
-			trySwing.enabled = false;
-			move.enabled = false;
-			great2.enabled = false;
 			right.enabled = true;
 			grip1.SetActive(true);
 		}
+		else if (Time.time >= 20 && Time.time < 20){
+			right.enabled = false;
+			great.enabled = true;
+		}
+		//else if (){
+
+		//}
 		else{
 			welcome.enabled = false;
 			trySwing.enabled = false;
