@@ -12,8 +12,7 @@ public class DestroyPlayers : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log(CountdownStart.playersLeft);
-		RemovePlayers(CountdownStart.playersLeft);
+		RemovePlayers(GetComponent<CountdownStart>().playersLeft);
 	}
 
 	public void RemovePlayers(int numPlayers){
@@ -33,7 +32,7 @@ public class DestroyPlayers : MonoBehaviour {
 				Destroy(Player4);
 			}
 			else if (numPlayers == 4){
-				print("all");
+				//print("all");
 			}
 	}
 }

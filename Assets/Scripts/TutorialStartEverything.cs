@@ -72,7 +72,7 @@ public class TutorialStartEverything : MonoBehaviour {
 		}
 		else if(timeEnd != 0 & Time.time - timeEnd > 3)
 		{
-				GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RandomLoadLevel>().RandomLevel();
+				GameObject.FindGameObjectWithTag("UI").GetComponent<RandomLoadLevel>().RandomLevel();
 		}
 	}
 }

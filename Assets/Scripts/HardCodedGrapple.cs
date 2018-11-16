@@ -409,6 +409,10 @@ public class HardCodedGrapple : MonoBehaviour
             lineR.enabled = false;
             lineR.GetComponent<roperatio>().taut = false;
         }
+        if(isTensioned)
+        {
+            GetComponent<PlayerController2>().resetJump();
+        }
         // if (control.yMove < -.5 & slackLength > minRopeLength * 1.05)
         // {
         //     CLIMBUP = true;

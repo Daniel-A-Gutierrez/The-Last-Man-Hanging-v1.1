@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277508070}
   m_Layer: 0
-  m_Name: Waypoint1
+  m_Name: Waypoint001
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f12165ce03ef74ea8f3f875575e239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  ratio: 1
 --- !u!4 &1395455000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 18fcd494ab71841d695135246693eb3a,
@@ -1084,7 +1084,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402991967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6081488, y: -4.02252, z: 0.6139206}
+  m_LocalPosition: {x: -1.6081488, y: -4.02252, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277508070}
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b00e7dce95ea14b9ca3bac72158608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 0
 --- !u!81 &1690789608
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1444,6 +1444,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011721911038, guid: 85161b7bddee49d4da9be5d7f5212e9f,
+        type: 2}
+      propertyPath: controller
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013712243546, guid: 85161b7bddee49d4da9be5d7f5212e9f,
+        type: 2}
+      propertyPath: PlayerNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85161b7bddee49d4da9be5d7f5212e9f, type: 2}
   m_IsPrefabAsset: 0
@@ -1456,7 +1466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785038287}
   m_Layer: 0
-  m_Name: Waypoint3
+  m_Name: Waypoint003
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1816,7 +1826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030152027}
   m_Layer: 0
-  m_Name: Waypoint4
+  m_Name: Waypoint004
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1879,7 +1889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107449292}
   m_Layer: 0
-  m_Name: Waypoint2
+  m_Name: Waypoint002
   m_TagString: CameraWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
