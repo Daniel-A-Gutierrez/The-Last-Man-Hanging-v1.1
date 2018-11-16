@@ -8832,7 +8832,6 @@ GameObject:
   - component: {fileID: 1702484138}
   - component: {fileID: 1702484139}
   - component: {fileID: 1702484141}
-  - component: {fileID: 1702484140}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9035,18 +9034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetFrameRate: 1000
---- !u!114 &1702484140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702484131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sameLevel: 1
 --- !u!114 &1702484141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9130,6 +9117,7 @@ GameObject:
   - component: {fileID: 1709580171}
   - component: {fileID: 1709580172}
   - component: {fileID: 1709580173}
+  - component: {fileID: 1709580174}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -9251,7 +9239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersLeft: 0
+  playersLeft: 4
+  numPlayers: 4
 --- !u!114 &1709580170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9296,6 +9285,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a89de53cca2be4d95d3a7935f89036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1709580174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709580162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sameLevel: 1
 --- !u!1001 &1710935339
 Prefab:
   m_ObjectHideFlags: 0

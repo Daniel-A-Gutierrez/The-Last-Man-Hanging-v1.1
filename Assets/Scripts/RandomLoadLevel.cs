@@ -13,7 +13,7 @@ public class RandomLoadLevel : MonoBehaviour
     public void RandomLevel()
     {
         if (SceneManager.GetActiveScene().buildIndex >= 4){
-          CountdownStart.playersLeft = CountdownStart.numPlayers;
+          GetComponent<CountdownStart>().playersLeft = GetComponent<CountdownStart>().numPlayers;
         }
         if (!sameLevel){
           int level = Random.Range(5, 8);

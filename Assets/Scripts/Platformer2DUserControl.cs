@@ -73,6 +73,7 @@ public class Platformer2DUserControl : MonoBehaviour
                 LThrow = Input.GetAxis("Cont_" + playerNumber + "_RB") > .95;
                 RThrow = Input.GetAxis("Cont_" + playerNumber + "_RT") > .95;
                 jump = Input.GetButton("Cont_" + playerNumber + "_A");//was button 8
+                if(jump){m_Character.Jump();}
                 useItemContinuous = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
                 if (useItemContinuous & justPressed)
                 {
