@@ -11,11 +11,11 @@ public class CountdownStart : MonoBehaviour
     bool poop = false;
     bool cursor = false; //Change to true for removing Cursor
     GameObject theCanvas;
-    
+
     float timeEnd;
 
-    public int playersLeft;
-    public int numPlayers;
+    int playersLeft;
+    int numPlayers;
 
     GameObject[] players;
     GameObject[] deathField;
@@ -33,7 +33,7 @@ public class CountdownStart : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         pauseMenu = GameObject.FindWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
-        numPlayers = playersLeft;
+        playersLeft = RandomLoadLevel.playersLeft;
         timeStart = Time.time;
         PauseEverything();
         //int playersLeft; // 4 for multiplayer, 1 for singleplayer
@@ -45,9 +45,15 @@ public class CountdownStart : MonoBehaviour
     }
     public void PauseEverything()
     {
+        if(GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed < 6){
+          cameraSpeed = 6;
+          GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
+        }
+        else{
+          cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
+          GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
+        }
 
-        cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
-        GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject go in gos)
@@ -128,9 +134,5 @@ public class CountdownStart : MonoBehaviour
             GameObject.FindGameObjectWithTag("UI").GetComponent<RandomLoadLevel>().RandomLevel();
         }
     }
-    public void PlayersLeft(int num)
-    {
-        playersLeft = num;
-        print(playersLeft);
-    }
+
 }

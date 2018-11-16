@@ -189,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680562873}
+      - m_Target: {fileID: 680562872}
         m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680562873}
+      - m_Target: {fileID: 680562872}
         m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680562873}
+      - m_Target: {fileID: 680562872}
         m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
@@ -718,6 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersLeft: 0
+  numPlayers: 0
 --- !u!114 &680562874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,7 +1043,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680562873}
+      - m_Target: {fileID: 680562872}
         m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:

@@ -8,17 +8,22 @@ public class DestroyPlayers : MonoBehaviour {
 	GameObject Player3;
 	GameObject Player4;
 
-	int players;
+	GameObject[] players;
+
 
 	// Use this for initialization
 	void Start () {
-		RemovePlayers(GetComponent<CountdownStart>().playersLeft);
+		players = GameObject.FindGameObjectsWithTag("Player");
+
+		RemovePlayers(RandomLoadLevel.playersLeft);
 	}
 
 	public void RemovePlayers(int numPlayers){
 			Player2 = GameObject.Find("Player2");
 			Player3 = GameObject.Find("Player3");
 			Player4 = GameObject.Find("Player4");
+
+
 			if (numPlayers == 1){
 					Destroy(Player2);
 					Destroy(Player3);

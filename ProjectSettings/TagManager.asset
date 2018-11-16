@@ -14,6 +14,7 @@ TagManager:
   - Hook
   - DeathZone
   - PauseMenu
+  - DeathObject
   layers:
   - Default
   - TransparentFX
