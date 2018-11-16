@@ -58,7 +58,6 @@ public class SwitchTutorialText : MonoBehaviour {
 		if (Time.time >= 3.5 && timer < 8){
 			welcome.enabled = true;
 		}
-		else if (Time.time >= 8 && Time.time < 12){
 			welcome.enabled = false;
 			trySwing.enabled = true;
 			grip.SetActive(true);

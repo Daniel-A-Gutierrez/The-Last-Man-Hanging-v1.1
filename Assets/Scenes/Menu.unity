@@ -1243,6 +1243,7 @@ GameObject:
   - component: {fileID: 2017183363}
   - component: {fileID: 2017183362}
   - component: {fileID: 2017183366}
+  - component: {fileID: 2017183367}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -1340,6 +1341,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2017183367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017183361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119682e7346b9cc4685f93fd6a290de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 57cb9d2f7d4e63140a3880071def4faf, type: 3}
+  cursorMode: 0
 --- !u!1 &2105999431
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - Grip
   - Hook
   - DeathZone
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

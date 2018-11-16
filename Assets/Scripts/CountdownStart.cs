@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CountdownStart : MonoBehaviour {
 
@@ -11,15 +12,25 @@ public class CountdownStart : MonoBehaviour {
     GameObject theCanvas;
     public static int playersLeft;
     float timeEnd;
+    public static int numPlayers;
 
     GameObject[] players;
     GameObject[] deathField ;
     GameObject mainCamera;
+    GameObject pauseMenu;
+
+    public static CountdownStart Instance;
+
+  void Awake ()
+  {
+    Instance = this;
+  }
 	void Start ()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        playersLeft = players.Length;
+        pauseMenu = GameObject.FindWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
+        numPlayers = playersLeft;
         timeStart = Time.time;
         PauseEverything();
         //int playersLeft; // 4 for multiplayer, 1 for singleplayer
@@ -28,7 +39,7 @@ public class CountdownStart : MonoBehaviour {
         }
         deathField = GameObject.FindGameObjectsWithTag("DeathZone");
 	}
-    void PauseEverything()
+    public void PauseEverything()
     {
 
         cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
@@ -41,7 +52,7 @@ public class CountdownStart : MonoBehaviour {
         }
         //actually do this in start everything. //transform.Find("MainCamera").gameObject.GetComponent<StartSong>().Play();
     }
-    void StartEverything()
+    public void StartEverything()
     {
 
         //foreach(GameObject go in GameObject.FindGameObjectsWithTag("UI"))
@@ -66,9 +77,9 @@ public class CountdownStart : MonoBehaviour {
         playersLeft--;
         if (playersLeft <= 1)
         {
-        foreach(GameObject g in deathField)
+        foreach(GameObject player in deathField)
             {
-                g.SetActive(false);
+                player.SetActive(false); //if player hits deathzone, deactives it
             }
             PauseEverything();
 
@@ -94,8 +105,10 @@ public class CountdownStart : MonoBehaviour {
     {
 	    if(Time.time - timeStart > 3 &!poop)
         {
-            StartEverything();
-            poop = true;
+            if(pauseMenu.activeSelf == false){  //in case paused while countdown is still happening
+              StartEverything();
+              poop = true;
+            }
         }
         else if (Time.time - timeStart > 2 & !poop)
         {
@@ -110,7 +123,8 @@ public class CountdownStart : MonoBehaviour {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RandomLoadLevel>().RandomLevel();
         }
     }
-  public void PlayersInGame(int num){
+  public void PlayersLeft(int num){
     playersLeft = num;
+    print(playersLeft);
   }
 }
