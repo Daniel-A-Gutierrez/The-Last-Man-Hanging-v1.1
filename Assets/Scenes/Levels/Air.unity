@@ -11541,7 +11541,7 @@ GameObject:
   - component: {fileID: 877637686}
   - component: {fileID: 877637685}
   - component: {fileID: 877637684}
-  - component: {fileID: 877637683}
+  - component: {fileID: 877637693}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11549,18 +11549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &877637683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 877637682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sameLevel: 0
 --- !u!114 &877637684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11767,6 +11755,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &877637693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877637682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7338f75fd87ed4bb824922b3808078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: 3f04e09d04abaf543a8e08f260c780e0, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &880622771
 Prefab:
   m_ObjectHideFlags: 0
@@ -23815,6 +23821,7 @@ GameObject:
   - component: {fileID: 1755173304}
   - component: {fileID: 1755173306}
   - component: {fileID: 1755173305}
+  - component: {fileID: 1755173307}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -23999,6 +24006,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a89de53cca2be4d95d3a7935f89036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1755173307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755173294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sameLevel: 0
 --- !u!1001 &1766276895
 Prefab:
   m_ObjectHideFlags: 0
