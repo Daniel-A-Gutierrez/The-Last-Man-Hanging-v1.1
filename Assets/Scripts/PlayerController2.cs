@@ -22,6 +22,7 @@ public class PlayerController2 : MonoBehaviour
 	private Rigidbody2D rb;
 	private string State;
 	private Dictionary<string,Action> States;
+	bool doubleJump;
 	
 	void Start () 
 	{
@@ -47,7 +48,7 @@ public class PlayerController2 : MonoBehaviour
 	void GROUNDED()
 	{
 		State = "GROUNDED";
-	
+		doubleJump = true;
 		if(!checkGround())
 		{
 			AIRBORNE();
@@ -61,6 +62,14 @@ public class PlayerController2 : MonoBehaviour
 		if(State == "GROUNDED")
 		{		
 			rb.AddForce(new Vector2(0,1)*jumpImpulse,ForceMode2D.Impulse);
+			AIRBORNE();
+			return;
+		}
+		else if(doubleJump)
+		{
+			rb.velocity -= new Vector2(0,rb.velocity.y);
+			rb.AddForce(new Vector2(0,1)*jumpImpulse,ForceMode2D.Impulse);
+			doubleJump = false;
 			AIRBORNE();
 			return;
 		}
@@ -106,9 +115,9 @@ public class PlayerController2 : MonoBehaviour
 		
 	}
 
-	void swing()
+	public void resetJump()
 	{
-
+		doubleJump = true;
 	}
 
 	void setFace()

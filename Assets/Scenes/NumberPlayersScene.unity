@@ -190,7 +190,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 680562873}
-        m_MethodName: PlayersInGame
+        m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -401,7 +401,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 680562873}
-        m_MethodName: PlayersInGame
+        m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 680562873}
-        m_MethodName: PlayersInGame
+        m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -606,6 +606,7 @@ GameObject:
   - component: {fileID: 680562873}
   - component: {fileID: 680562872}
   - component: {fileID: 680562874}
+  - component: {fileID: 680562875}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -726,6 +727,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9353aa44a18b56942b85b32873fc3dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &680562875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680562867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9b7cc3a8047674da916b7446826d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1008360702
@@ -1030,7 +1042,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 680562873}
-        m_MethodName: PlayersInGame
+        m_MethodName: PlayersLeft
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

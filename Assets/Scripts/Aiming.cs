@@ -27,12 +27,6 @@ public class Aiming : MonoBehaviour
         }
 
         this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, Mathf.Atan2(-h, -v) * Mathf.Rad2Deg);
-
-        if (Input.GetKeyDown("joystick 1 button 0"))
-        {
-            print("Horizontal:" + h);
-            print("Vertical: " + v);
-        }
     }
     void LateUpdate()
     {

@@ -6,8 +6,15 @@ public class RandomLoadLevel : MonoBehaviour
 {
     //Platformer2DUserControl control;
     public bool sameLevel;
+
+    void Start(){
+
+    }
     public void RandomLevel()
     {
+        if (SceneManager.GetActiveScene().buildIndex >= 4){
+          GetComponent<CountdownStart>().playersLeft = GetComponent<CountdownStart>().numPlayers;
+        }
         if (!sameLevel){
           int level = Random.Range(5, 8);
           SceneManager.LoadScene(level);

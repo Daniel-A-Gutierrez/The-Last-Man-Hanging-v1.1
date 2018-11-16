@@ -37,7 +37,7 @@ public class Platformer2DUserControl : MonoBehaviour
             yMove = Input.GetAxis("Cont_" + playerNumber + "_Left_Vert");
             LThrow = Input.GetAxis("Cont_" + playerNumber + "_RB") > .95;
             RThrow = Input.GetAxis("Cont_" + playerNumber + "_RT") > .95;
-            jump = Input.GetAxis("Cont_" + playerNumber + "_A") > .95;
+            jump = Input.GetButton("Cont_" + playerNumber + "_A");
             useItemContinuous = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
             useItem1Frame = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
         }
@@ -72,7 +72,8 @@ public class Platformer2DUserControl : MonoBehaviour
                 yMove = Input.GetAxis("Cont_" + playerNumber + "_Left_Vert");
                 LThrow = Input.GetAxis("Cont_" + playerNumber + "_RB") > .95;
                 RThrow = Input.GetAxis("Cont_" + playerNumber + "_RT") > .95;
-                jump = Input.GetKeyDown("joystick " + playerNumber + " button 8");
+                jump = Input.GetButton("Cont_" + playerNumber + "_A");//was button 8
+                if(jump){m_Character.Jump();}
                 useItemContinuous = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
                 if (useItemContinuous & justPressed)
                 {
