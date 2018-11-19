@@ -5200,10 +5200,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 378971226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e7338f75fd87ed4bb824922b3808078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sameLevel: 0
+  sounds:
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: 3f04e09d04abaf543a8e08f260c780e0, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &378971228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8135,6 +8141,7 @@ GameObject:
   - component: {fileID: 587079606}
   - component: {fileID: 587079608}
   - component: {fileID: 587079607}
+  - component: {fileID: 587079609}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: UI
@@ -8275,7 +8282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersLeft: 0
 --- !u!114 &587079605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8320,6 +8326,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a89de53cca2be4d95d3a7935f89036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &587079609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587079596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da616a9f4e42514e8c58ca9eb1451ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sameLevel: 1
 --- !u!1001 &589540856
 Prefab:
   m_ObjectHideFlags: 0
