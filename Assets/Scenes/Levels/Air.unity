@@ -23816,6 +23816,7 @@ GameObject:
   - component: {fileID: 1755173295}
   - component: {fileID: 1755173300}
   - component: {fileID: 1755173301}
+  - component: {fileID: 1755173308}
   - component: {fileID: 1755173302}
   - component: {fileID: 1755173303}
   - component: {fileID: 1755173304}
@@ -24018,6 +24019,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameLevel: 0
+--- !u!114 &1755173308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755173294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede90ae2e5c85a248b827e9794ee13b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 1906441094777496, guid: c09b3c8691fee71438daa4364f1f3863, type: 2}
 --- !u!1001 &1766276895
 Prefab:
   m_ObjectHideFlags: 0

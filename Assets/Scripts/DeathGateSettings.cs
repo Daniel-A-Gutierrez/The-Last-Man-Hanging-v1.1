@@ -13,7 +13,7 @@ public class DeathGateSettings : MonoBehaviour {
 	void Update () {
 
 	}
-	void OnCollisionEnter2D(Collision2D other)
+	void OnCollisionEnter2D(Collision2D other)	//Whenever a player hits a death gate, they die and audio is played
 	{
 			if (other.gameObject.tag == "Player")
 			{

@@ -15,10 +15,10 @@ public class DestroyPlayers : MonoBehaviour {
 	void Start () {
 		players = GameObject.FindGameObjectsWithTag("Player");
 
-		RemovePlayers(RandomLoadLevel.playersLeft);
+		RemovePlayers(RandomLoadLevel.playersLeft); //depends on the character menu option
 	}
 
-	public void RemovePlayers(int numPlayers){
+	public void RemovePlayers(int numPlayers){ //sets active players to false depending on how many players are needed
 			Player2 = GameObject.Find("Player2");
 			Player3 = GameObject.Find("Player3");
 			Player4 = GameObject.Find("Player4");
