@@ -25,16 +25,16 @@ public class DestroyPlayers : MonoBehaviour {
 
 
 			if (numPlayers == 1){
-					Destroy(Player2);
-					Destroy(Player3);
-					Destroy(Player4);
+					Player2.SetActive(false);
+					Player3.SetActive(false);
+					Player4.SetActive(false);
 			}
 			else if (numPlayers == 2){
-				Destroy(Player3);
-				Destroy(Player4);
+				Player3.SetActive(false);
+				Player4.SetActive(false);
 			}
 			else if (numPlayers == 3){
-				Destroy(Player4);
+				Player4.SetActive(false);
 			}
 			else if (numPlayers == 4){
 				//print("all");
