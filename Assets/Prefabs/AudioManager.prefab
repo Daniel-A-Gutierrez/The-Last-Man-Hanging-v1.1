@@ -76,3 +76,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: explosion1
+    clip: {fileID: 8300000, guid: 862fc5a15c71e3e488ede1732d4094e8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone_Dial_Beeps
+    clip: {fileID: 8300000, guid: bc8f8b653fd1bac4abcd1c0fb60e4fbe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
