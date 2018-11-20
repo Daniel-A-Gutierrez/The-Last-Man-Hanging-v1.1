@@ -6,14 +6,14 @@ public class GeneratingObstacles : MonoBehaviour {
 
 	int[] x_distance = {30, 40}; //distances between each obstacle
 	int x;
-	int[] y = {-8, 0, 4};	//holds three possible y coords for obstacles
+	int[] y = {-8, -2, 4};	//holds three possible y coords for obstacles
 	int done = 0;
 	int x_select = 0; //For for loop
 	public GameObject obstacle; //holds obstacle
 
 	// Use this for initialization
 	void Start () {
-			x = 70 + x_distance[0]; //initializes first x coords, 70 last x coords for established obstacles
+			x = -5 + x_distance[0]; //initializes first x coords, -5 last x coords for established obstacles
 	}
 
 	// Update is called once per frame

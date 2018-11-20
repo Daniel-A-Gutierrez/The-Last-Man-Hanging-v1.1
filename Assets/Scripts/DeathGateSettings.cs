@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class DeathGateSettings : MonoBehaviour {
 
+	IEnumerator coroutine;
+
 	// Use this for initialization
 	void Start () {
 
 	}
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-	void OnCollisionEnter2D(Collision2D other)	//Whenever a player hits a death gate, they die and audio is played
+	void OnTriggerEnter2D(Collider2D other)	//Whenever a player hits a death gate, they die and audio is played
 	{
 			if (other.gameObject.tag == "Player")
 			{
-					other.gameObject.SetActive(false);
-					GameObject.FindGameObjectWithTag("UI").GetComponent<CountdownStart>().decrementPlayerCount();
-					FindObjectOfType<AudioManager>().Play("PlayerDeath");
+					coroutine = WaitKill(other.gameObject);
+					StartCoroutine(coroutine);
 			}
 
 	}
+	IEnumerator WaitKill(GameObject player)
+  {
+      yield return new WaitForSeconds(0.5f);
+			player.SetActive(false);
+			GameObject.FindGameObjectWithTag("UI").GetComponent<CountdownStart>().decrementPlayerCount();
+			FindObjectOfType<AudioManager>().Play("PlayerDeath");
+  }
 }
