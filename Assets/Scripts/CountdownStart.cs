@@ -17,7 +17,7 @@ public class CountdownStart : MonoBehaviour
     int playersLeft;
     int numPlayers;
 
-    GameObject[] players;
+    //GameObject[] players;//is unused
     GameObject[] deathField;
     GameObject mainCamera;
     GameObject pauseMenu;
@@ -30,7 +30,7 @@ public class CountdownStart : MonoBehaviour
     }
     void Start()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
+        //players = GameObject.FindGameObjectsWithTag("Player"); // was unused
         pauseMenu = GameObject.FindWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
         playersLeft = RandomLoadLevel.playersLeft;
@@ -91,6 +91,7 @@ public class CountdownStart : MonoBehaviour
             {
                 zone.SetActive(false); //deactivates death zone on game
             }
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             PauseEverything();
 
             GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");

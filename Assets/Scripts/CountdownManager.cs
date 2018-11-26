@@ -6,10 +6,10 @@ public class CountdownManager : MonoBehaviour
 {
     Text counter;
     // Use this for initialization
-    float startTime;
+    //float startTime; // was unused
 	void Start ()
     {
-        startTime = Time.time;
+        //startTime = Time.time;
         counter = transform.GetChild(0).gameObject.GetComponent<Text>();
 	}
 	

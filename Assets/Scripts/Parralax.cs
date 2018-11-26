@@ -52,7 +52,7 @@ public class Parralax : MonoBehaviour {
         speeds = new float[] { speed0, speed1, speed2, speed3, speed4, speed5 };
         layers = new GameObject[childCount];
         initialx = new float[childCount];
-        sets = sets = new float[childCount];
+        sets = new float[childCount];
         I = 0;
         layers = GameObject.FindGameObjectsWithTag("BackgroundLayer");
         GameObject[] placeholder = new GameObject[layers.Length];
@@ -102,7 +102,7 @@ public class Parralax : MonoBehaviour {
         speeds = new float[] { speed0, speed1, speed2, speed3, speed4, speed5 };
         layers = new GameObject[childCount];
         initialx = new float[childCount];
-        sets = sets = new float[childCount];
+        sets = new float[childCount];
         layers = GameObject.FindGameObjectsWithTag("BackgroundLayer");
         GameObject[] placeholder = new GameObject[layers.Length];
         for (int i = 0; i < layers.Length; i++)
