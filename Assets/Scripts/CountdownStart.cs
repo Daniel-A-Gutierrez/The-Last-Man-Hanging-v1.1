@@ -31,7 +31,7 @@ public class CountdownStart : MonoBehaviour
     void Start()
     {
         //players = GameObject.FindGameObjectsWithTag("Player"); // was unused
-        pauseMenu = GameObject.FindWithTag("PauseMenu");
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
         playersLeft = RandomLoadLevel.playersLeft;
         timeStart = Time.time;
@@ -105,7 +105,7 @@ public class CountdownStart : MonoBehaviour
                 }
             }
             print(winNumber);
-            theCanvas.GetComponent<ScoreBoard1>().IncreaseScore(winNumber);
+            //theCanvas.GetComponent<ScoreBoard1>().IncreaseScore(winNumber);
             theCanvas.GetComponent<CountdownManager>().fitText();
             int timer = (int)(Time.time - timeStart);
             theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + timer + " seconds\nWinner: Player " + winNumber + "</b>");
@@ -118,11 +118,11 @@ public class CountdownStart : MonoBehaviour
     {
         if (Time.time - timeStart > 3 & !poop)
         {
-            if (pauseMenu.activeSelf == false)
-            {  //in case paused while countdown is still happening
-                StartEverything();
-                poop = true;
-            }
+            // if (pauseMenu.activeSelf == false)
+            // {  //in case paused while countdown is still happening
+                 StartEverything();
+                 poop = true;
+            // }
         }
         else if (Time.time - timeStart > 2 & !poop)
         {

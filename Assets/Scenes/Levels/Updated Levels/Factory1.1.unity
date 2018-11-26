@@ -249,7 +249,7 @@ Prefab:
     - target: {fileID: 114003497917046446, guid: 0c29ca24213044b4f9c4b495523ee6a8,
         type: 2}
       propertyPath: sounds.Array.data[1].volume
-      value: 0
+      value: 0.201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c29ca24213044b4f9c4b495523ee6a8, type: 2}
@@ -370,6 +370,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108726464531884, guid: 3ec22c47654ad144195766b009642a73, type: 2}
+      propertyPath: m_TagString
+      value: PauseMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ec22c47654ad144195766b009642a73, type: 2}
