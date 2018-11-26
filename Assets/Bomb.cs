@@ -8,7 +8,6 @@ public class Bomb : MonoBehaviour
 	public float radius;
 	public float maxRadius;
 	public float force;
-	float maxForce;//determines the maximum force that can be applied within the max Radius. 
 	public LayerMask trigger;
 	
 	public Animator animator;
@@ -24,7 +23,6 @@ public class Bomb : MonoBehaviour
 	{
 		audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>(); 
 		Array.Find(audioManager.sounds, sound => sound.name == "Phone_Dial_Beeps").source.pitch = tickSpeed/2;
-		maxForce = maxRadius/radius * force;
 		animator.speed = idleSpeed;//plays the idle by entry default.
 	}
 	

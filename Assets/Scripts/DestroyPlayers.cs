@@ -8,12 +8,12 @@ public class DestroyPlayers : MonoBehaviour {
 	GameObject Player3;
 	GameObject Player4;
 
-	GameObject[] players;
+//	GameObject[] players; // was unused
 
 
 	// Use this for initialization
 	void Start () {
-		players = GameObject.FindGameObjectsWithTag("Player");
+//unused		players = GameObject.FindGameObjectsWithTag("Player");
 
 		RemovePlayers(RandomLoadLevel.playersLeft); //depends on the character menu option
 	}

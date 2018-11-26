@@ -52,7 +52,7 @@ public class SwitchTutorialText : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float frame = 1.0f/Time.deltaTime;
+		//float frame = 1.0f/Time.deltaTime;
 		float timer = Time.time - timeStart;
 
 		if (Time.time >= 3.5 && timer < 8){
