@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Factory.unity
     guid: 0f48ebb0f301c5a4f82a76df65b0259a
   - enabled: 1
+    path: Assets/Scenes/Levels/Updated Levels/Factory1.1.unity
+    guid: ebd2d151b1f7ddb42a01bbe32b555cb4
+  - enabled: 1
     path: Assets/Scenes/Levels/Tutorial Levels/Tutorial Level 1.unity
     guid: 51303074466e49348a5743c9553a7504
   - enabled: 1

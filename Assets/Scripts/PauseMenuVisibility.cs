@@ -8,7 +8,7 @@ public class PauseMenuVisibility : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		pauseMenu = GameObject.FindWithTag("PauseMenu");
+		pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 		pauseMenu.SetActive(false);
 	}
 
