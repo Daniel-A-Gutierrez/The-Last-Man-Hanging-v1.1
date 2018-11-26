@@ -21,7 +21,7 @@ public class RandomLoadLevel : MonoBehaviour
           SceneManager.LoadScene(scene.buildIndex); //Reloads the level again if sameLevel is True
         }
         if (!sameLevel){ //Raandom level if sameLevel is not true
-          int level = Random.Range(7, 8);
+          int level = Random.Range(8, 9);
           ScoreBoard1.reset = true;
           SceneManager.LoadScene(level);
         }
