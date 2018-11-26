@@ -35,6 +35,7 @@ public class CountdownStart : MonoBehaviour
         theCanvas = GameObject.Find("Canvas");
         playersLeft = RandomLoadLevel.playersLeft;
         timeStart = Time.time;
+        ScoreBoard1.reset = false;
         PauseEverything();
         //int playersLeft; // 4 for multiplayer, 1 for singleplayer
         if (cursor)
@@ -104,6 +105,7 @@ public class CountdownStart : MonoBehaviour
                 }
             }
             print(winNumber);
+            theCanvas.GetComponent<ScoreBoard1>().IncreaseScore(winNumber);
             theCanvas.GetComponent<CountdownManager>().fitText();
             int timer = (int)(Time.time - timeStart);
             theCanvas.GetComponent<CountdownManager>().SetText("<b>TIME : " + timer + " seconds\nWinner: Player " + winNumber + "</b>");
