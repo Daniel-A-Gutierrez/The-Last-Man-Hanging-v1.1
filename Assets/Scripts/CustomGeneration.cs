@@ -75,7 +75,7 @@ public class CustomGeneration : MonoBehaviour
 		loaded.Add(Instantiate(tiers[loadtier][loadnum],Vector3.zero,Quaternion.identity));
 		
 
-		move +=	v2v3(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().offset) +
+		move +=	-v2v3(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().offset) +
 			   v2v3(new Vector2(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().size.x,0))/2 ;
 		loaded[loaded.Count -1].transform.position = move;
 		

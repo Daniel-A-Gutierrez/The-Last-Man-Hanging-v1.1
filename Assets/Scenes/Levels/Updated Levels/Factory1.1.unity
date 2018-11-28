@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7386345a63feb4e85f111071493a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadDistance: 50
+  loadDistance: 999
   deleteDistance: 40
   numTiers: 1
   progressionRate: 1
