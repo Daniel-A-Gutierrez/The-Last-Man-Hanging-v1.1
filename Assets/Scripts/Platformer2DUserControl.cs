@@ -37,7 +37,7 @@ public class Platformer2DUserControl : MonoBehaviour
             yMove = Input.GetAxis("Cont_" + playerNumber + "_Left_Vert");
             LThrow = Input.GetAxis("Cont_" + playerNumber + "_RB") > .95;
             RThrow = Input.GetAxis("Cont_" + playerNumber + "_RT") > .95;
-            jump = Input.GetButton("Cont_" + playerNumber + "_A") || Input.GetButton("Cont_" + playerNumber + "_LT");
+            jump = Input.GetButton("Cont_" + playerNumber + "_A"); //|| Input.GetButton("Cont_" + playerNumber + "_LT");
             useItemContinuous = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
             useItem1Frame = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
         }
@@ -72,7 +72,7 @@ public class Platformer2DUserControl : MonoBehaviour
                 yMove = Input.GetAxis("Cont_" + playerNumber + "_Left_Vert");
                 LThrow = Input.GetAxis("Cont_" + playerNumber + "_RB") > .95;
                 RThrow = Input.GetAxis("Cont_" + playerNumber + "_RT") > .95;
-                jump = Input.GetButton("Cont_" + playerNumber + "_A") || Input.GetButton("Cont_" + playerNumber + "_LT");
+                jump = Input.GetButton("Cont_" + playerNumber + "_A"); //|| Input.GetButton("Cont_" + playerNumber + "_LT");
                 if (jump){m_Character.Jump();}
                 useItemContinuous = Input.GetAxis("Cont_" + playerNumber + "_B") > .95;
                 if (useItemContinuous & justPressed)
@@ -93,7 +93,6 @@ public class Platformer2DUserControl : MonoBehaviour
 
 
             }
-
             else
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition); //thanks shawn for this function

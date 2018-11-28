@@ -33,7 +33,7 @@ public class CountdownStart : MonoBehaviour
         //players = GameObject.FindGameObjectsWithTag("Player"); // was unused
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
-        playersLeft = RandomLoadLevel.playersLeft;
+        playersLeft = 5;//RandomLoadLevel.playersLeft;
         timeStart = Time.time;
         ScoreBoard1.reset = false;
         PauseEverything();
