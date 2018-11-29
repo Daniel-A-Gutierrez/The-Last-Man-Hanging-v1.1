@@ -71,7 +71,6 @@ public class CustomGeneration : MonoBehaviour
 		Vector3 move = loaded[loaded.Count -1].transform.position + 
 			v2v3(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().offset) +
 			   v2v3(new Vector2(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().size.x,0))/2 ;
-		print("Adding");
 		loaded.Add(Instantiate(tiers[loadtier][loadnum],Vector3.zero,Quaternion.identity));
 		
 
@@ -92,7 +91,6 @@ public class CustomGeneration : MonoBehaviour
 			v2v3(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().offset) +
 			   v2v3(loaded[loaded.Count -1].GetComponent<BoxCollider2D>().size)/2).magnitude) 
 			   {
-				   print(loaded.Count);
 				   loadChunk();
 			   }
 		if(camPos.position.magnitude - deleteDistance > (loaded[0].transform.position + 

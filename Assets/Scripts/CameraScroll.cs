@@ -10,8 +10,9 @@ using Unity.Collections;
 public class CameraScroll : MonoBehaviour {
     GameObject[] waypoints;
     int currentWaypoint = 0;
-
-    public float speed;
+    public float speed; //speed at the start , and throughout the game
+    public float maxSpeed;
+    public bool accellerate = true;
 	// Use this for initialization
 	void Start () {
         StartCoroutine("Wait", 2);
@@ -26,7 +27,7 @@ public class CameraScroll : MonoBehaviour {
     {
         Vector3 target = waypoints[currentWaypoint].transform.position;
         transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime);
-        speed += .035f * Time.deltaTime;
+        speed += ((speed < maxSpeed) && accellerate) ?  .15f * Time.deltaTime:  0;
         if (transform.position == target)
         {
             findNextWaypoint();
