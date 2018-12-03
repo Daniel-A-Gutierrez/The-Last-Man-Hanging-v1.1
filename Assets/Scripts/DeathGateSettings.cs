@@ -27,4 +27,4 @@ public class DeathGateSettings : MonoBehaviour {
 			GameObject.FindGameObjectWithTag("UI").GetComponent<CountdownStart>().decrementPlayerCount();
 			FindObjectOfType<AudioManager>().Play("PlayerDeath");
   }
-}
+} 
