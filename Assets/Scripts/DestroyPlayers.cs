@@ -6,7 +6,7 @@ public class DestroyPlayers : MonoBehaviour {
 
 	GameObject Player2;
 	GameObject Player3;
-	GameObject Player4;
+	GameObject Player1;
 
 //	GameObject[] players; // was unused
 
