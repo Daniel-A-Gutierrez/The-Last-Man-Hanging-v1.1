@@ -21,20 +21,20 @@ public class DestroyPlayers : MonoBehaviour {
 	public void RemovePlayers(int numPlayers){ //sets active players to false depending on how many players are needed
 			Player2 = GameObject.Find("Player2");
 			Player3 = GameObject.Find("Player3");
-			Player4 = GameObject.Find("Player4");
+			Player1 = GameObject.Find("Player1");
 
 
 			if (numPlayers == 1){
 					Player2.SetActive(false);
 					Player3.SetActive(false);
-					Player4.SetActive(false);
+					Player1.SetActive(false);
 			}
 			else if (numPlayers == 2){
-				Player3.SetActive(false);
-				Player4.SetActive(false);
+				Player2.SetActive(false);
+				Player1.SetActive(false);
 			}
 			else if (numPlayers == 3){
-				Player4.SetActive(false);
+				Player1.SetActive(false);
 			}
 			else if (numPlayers == 4){
 				//print("all");
