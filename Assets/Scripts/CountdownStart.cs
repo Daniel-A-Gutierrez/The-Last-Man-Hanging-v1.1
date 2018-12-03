@@ -26,12 +26,12 @@ public class CountdownStart : MonoBehaviour
 
     void Awake()
     {
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         Instance = this;
     }
     void Start()
     {
         //players = GameObject.FindGameObjectsWithTag("Player"); // was unused
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         theCanvas = GameObject.Find("Canvas");
         playersLeft = RandomLoadLevel.playersLeft;
         timeStart = Time.time;
@@ -116,11 +116,11 @@ public class CountdownStart : MonoBehaviour
     {
         if (Time.time - timeStart > 3 & !poop)
         {
-            // if (pauseMenu.activeSelf == false)
-            // {  //in case paused while countdown is still happening
+             if (pauseMenu.activeSelf == false)
+             {  //in case paused while countdown is still happening
                  StartEverything();
                  poop = true;
-            // }
+             }
         }
         else if (Time.time - timeStart > 2 & !poop)
         {
