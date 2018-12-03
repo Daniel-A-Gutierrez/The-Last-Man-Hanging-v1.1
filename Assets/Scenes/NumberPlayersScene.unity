@@ -411,9 +411,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 680562874}
-        m_MethodName: Load_Level
-        m_Mode: 3
+      - m_Target: {fileID: 680562872}
+        m_MethodName: RandomLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -718,8 +718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5944a3ff9c900d14db08a231adfc16ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersLeft: 0
-  numPlayers: 0
 --- !u!114 &680562874
 MonoBehaviour:
   m_ObjectHideFlags: 0

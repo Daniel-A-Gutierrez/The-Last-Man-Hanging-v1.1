@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour 
+public class Bomb : MonoBehaviour
 {
 	public float radius;
 	public float maxRadius;
 	public float force;
 	public LayerMask trigger;
-	
+
 	public Animator animator;
 
 	public float TickTime;
@@ -18,28 +18,31 @@ public class Bomb : MonoBehaviour
 	public float explosionSpeed;
 	bool exploded = false;
 	AudioManager audioManager;
+	CircleCollider2D bomb_radius;
 
-	void Start () 
+	void Start ()
 	{
-		audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>(); 
+		audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
 		Array.Find(audioManager.sounds, sound => sound.name == "Phone_Dial_Beeps").source.pitch = tickSpeed/2;
 		animator.speed = idleSpeed;//plays the idle by entry default.
 	}
-	
+
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
-		
+
 	}
-	//the animations have events which progress the method stream and terminate the explosion. 
+	//the animations have events which progress the method stream and terminate the explosion.
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if(collider.CompareTag("Hook") & !exploded)
+		if((collider.CompareTag("Hook") || collider.CompareTag("Bomb")) & !exploded)
 		{
 			animator.Play("BombAnim");
 			audioManager.Play("Phone_Dial_Beeps");
 			animator.speed = tickSpeed;
 			exploded = true;
+			bomb_radius = gameObject.AddComponent<CircleCollider2D>() as CircleCollider2D;
+			bomb_radius.radius = radius;
 			StartCoroutine("Tick");
 		}
 	}
@@ -52,7 +55,7 @@ public class Bomb : MonoBehaviour
 		Gizmos.DrawWireSphere(transform.position,maxRadius);
 	}
 
-	IEnumerator Tick() 
+	IEnumerator Tick()
 	{
 		yield return new WaitForSeconds(TickTime);
 		EndTick();
@@ -77,5 +80,5 @@ public class Bomb : MonoBehaviour
 	{
 		gameObject.SetActive(false);
 	}
-	
+
 }

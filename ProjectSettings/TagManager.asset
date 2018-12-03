@@ -15,6 +15,7 @@ TagManager:
   - DeathZone
   - PauseMenu
   - DeathObject
+  - Bomb
   layers:
   - Default
   - TransparentFX
