@@ -7,7 +7,7 @@ public class RandomLoadLevel : MonoBehaviour
     //Platformer2DUserControl control;
     public bool sameLevel; //For if the same level is to be repeated
     int numPlayers; //current number of players left
-    public static int playersLeft;
+    public static int playersLeft = 4;
 
     void Start(){
       numPlayers = playersLeft;

@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7386345a63feb4e85f111071493a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadDistance: 50
+  loadDistance: 60
   deleteDistance: 40
   numTiers: 1
   progressionRate: 1
@@ -694,7 +694,7 @@ Prefab:
     - target: {fileID: 114328285669188064, guid: 6d91a890e05a04b428fd9ea9bd8ded90,
         type: 2}
       propertyPath: speed
-      value: 5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 82256997570076608, guid: 6d91a890e05a04b428fd9ea9bd8ded90,
         type: 2}
@@ -708,6 +708,16 @@ Prefab:
     - target: {fileID: 1697733993625266, guid: 6d91a890e05a04b428fd9ea9bd8ded90, type: 2}
       propertyPath: m_TagString
       value: DeathZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 114328285669188064, guid: 6d91a890e05a04b428fd9ea9bd8ded90,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114328285669188064, guid: 6d91a890e05a04b428fd9ea9bd8ded90,
+        type: 2}
+      propertyPath: accellerate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d91a890e05a04b428fd9ea9bd8ded90, type: 2}
@@ -778,6 +788,11 @@ Prefab:
     - target: {fileID: 4000011968215514, guid: 85161b7bddee49d4da9be5d7f5212e9f, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011721911038, guid: 85161b7bddee49d4da9be5d7f5212e9f,
+        type: 2}
+      propertyPath: controller
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85161b7bddee49d4da9be5d7f5212e9f, type: 2}

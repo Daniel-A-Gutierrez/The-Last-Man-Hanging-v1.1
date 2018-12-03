@@ -46,17 +46,10 @@ public class CountdownStart : MonoBehaviour
     }
     public void PauseEverything()
     {
-        if(GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed < 6){
-          cameraSpeed = 6;
-          GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
-        }
-        else{
-          cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed;
-          GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
-        }
-
+        cameraSpeed = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed ;
+        GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = 0;
+        GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().accellerate = false;
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
-
         foreach (GameObject go in gos)
         {
             go.GetComponent<Platformer2DUserControl>().noInput();
@@ -70,16 +63,21 @@ public class CountdownStart : MonoBehaviour
         //{
         //    Destroy(go);
         //}
+
         theCanvas.GetComponent<CountdownManager>().SetText(" ");
         GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().speed = cameraSpeed;
+        GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<CameraScroll>().accellerate = true;
 
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject go in gos)
         {
             go.GetComponent<Platformer2DUserControl>().startInput();
         }
-        GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<StartSong>().Play();
-        FindObjectOfType<AudioManager>().Play("BackgroundMusic");
+        if(!FindObjectOfType<AudioManager>().IsPlaying("BackgroundMusic"))
+        {
+            FindObjectOfType<AudioManager>().Play("BackgroundMusic");
+        }
+        //GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<StartSong>().Play();
 
     }
     // Update is called once per frame
