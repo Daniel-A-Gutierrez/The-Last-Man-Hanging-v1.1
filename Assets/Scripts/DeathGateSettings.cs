@@ -22,7 +22,7 @@ public class DeathGateSettings : MonoBehaviour {
 	}
 	IEnumerator WaitKill(GameObject player)
   {
-      yield return new WaitForSeconds(0.1f);
+      yield return new WaitForSeconds(0.5f);
 			player.SetActive(false);
 			GameObject.FindGameObjectWithTag("UI").GetComponent<CountdownStart>().decrementPlayerCount();
 			FindObjectOfType<AudioManager>().Play("PlayerDeath");
