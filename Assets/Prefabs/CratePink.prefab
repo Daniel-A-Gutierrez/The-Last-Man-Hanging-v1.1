@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 21200000}
   - component: {fileID: 6100000}
   - component: {fileID: 5000000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CratePink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
