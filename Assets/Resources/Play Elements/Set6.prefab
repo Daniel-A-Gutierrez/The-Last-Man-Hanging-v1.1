@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4015650341685086}
   - component: {fileID: 212106647450381396}
   - component: {fileID: 61521616834642074}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4030279136842370}
   - component: {fileID: 212632991241372930}
   - component: {fileID: 61040048564093542}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4616900178705824}
   - component: {fileID: 212928174262316648}
   - component: {fileID: 61995239929602434}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4395622699643366}
   - component: {fileID: 212015611483770516}
   - component: {fileID: 61061689280373700}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4140171505898884}
   - component: {fileID: 212137164475021212}
   - component: {fileID: 61562003760271392}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4703365599900726}
   - component: {fileID: 212727912028427022}
   - component: {fileID: 61833488627245664}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4037870955087350}
   - component: {fileID: 212620832961685766}
   - component: {fileID: 61218698320650844}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4342971462272846}
   - component: {fileID: 212631292054117772}
   - component: {fileID: 61573815689395090}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

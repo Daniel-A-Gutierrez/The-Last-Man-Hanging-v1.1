@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4098895346841404}
   - component: {fileID: 212630274966920946}
   - component: {fileID: 61419358823064040}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4207288120811524}
   - component: {fileID: 212652006274494394}
   - component: {fileID: 61646348809755956}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4990611379237732}
   - component: {fileID: 212896375329030814}
   - component: {fileID: 61454859042916366}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4433778918120340}
   - component: {fileID: 212411571476236996}
   - component: {fileID: 61728693334496864}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4748145964457840}
   - component: {fileID: 212080707597195978}
   - component: {fileID: 61045017302818978}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4475167467455226}
   - component: {fileID: 212594489320730132}
   - component: {fileID: 61147094623984510}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4440608984651200}
   - component: {fileID: 212662279286939184}
   - component: {fileID: 61003369117954974}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4770106496365740}
   - component: {fileID: 212765935502522886}
   - component: {fileID: 61283302301200080}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

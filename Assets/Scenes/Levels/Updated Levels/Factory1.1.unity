@@ -168,9 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadDistance: 60
   deleteDistance: 40
-  numTiers: 1
-  progressionRate: 1
-  distributionSize: 1
+  numTiers: 4
+  progressionRate: 2
+  distributionSize: 2
 --- !u!1001 &271077876
 Prefab:
   m_ObjectHideFlags: 0

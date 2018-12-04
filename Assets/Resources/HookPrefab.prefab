@@ -73,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -196,15 +196,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hookSpeed: 35
-  hitRadius: 0.55
+  hitRadius: 0.65
   RETURN: 1
   playerPosition: {x: 0, y: 0}
   whatIsGrappleable:
     serializedVersion: 2
-    m_Bits: 3072
+    m_Bits: 9216
   hooks:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   isHooked: 0
   parentID: 0
   hookID: 

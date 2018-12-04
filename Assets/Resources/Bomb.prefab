@@ -102,7 +102,7 @@ MonoBehaviour:
   force: 60
   trigger:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
   animator: {fileID: 95313828903320096}
   TickTime: 1
   tickSpeed: 5

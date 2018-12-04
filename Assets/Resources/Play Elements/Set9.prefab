@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4836419079995094}
   - component: {fileID: 212270217650881616}
   - component: {fileID: 61321870916427842}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4059447641231314}
   - component: {fileID: 212161896520387774}
   - component: {fileID: 61444583922805952}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4429613703493944}
   - component: {fileID: 212321995076071898}
   - component: {fileID: 61471072067309814}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4568310462676252}
   - component: {fileID: 212793038270793676}
   - component: {fileID: 61745156863737514}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4451216433062706}
   - component: {fileID: 212068079944911444}
   - component: {fileID: 61301227055635570}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4194531025451994}
   - component: {fileID: 212220105423676640}
   - component: {fileID: 61086917047753020}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4133088198260588}
   - component: {fileID: 212314084903155392}
   - component: {fileID: 61618812216038122}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4494039741385972}
   - component: {fileID: 212459779321409930}
   - component: {fileID: 61573106505965826}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4159000529625668}
   - component: {fileID: 212145708574635942}
   - component: {fileID: 61446644365781144}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4990123727557686}
   - component: {fileID: 212895269758510814}
   - component: {fileID: 61582196762446028}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Grip (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
