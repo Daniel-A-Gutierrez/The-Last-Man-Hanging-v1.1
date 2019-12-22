@@ -710,9 +710,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: c81cd0cc-1149-4baf-b0c9-e2865d333b6f
+  cloudProjectId: 9d969c4e-f995-4d41-b413-be7a6ba4ffad
   projectName: The Last Man Hanging
-  organizationId: video-game-development-club
+  organizationId: wazyr
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
